@@ -39,6 +39,11 @@ body { background-color: var(--base-dark); margin: 0px; }
     font: 3em 'Secular One';
     text-align: center;
 }
+.sub {
+    color: var(--base-light);
+    font: 0.2em 'Sen';
+    text-align: center;
+}
 
 /* Classes do Canvas */
 .canvas-container {
