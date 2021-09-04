@@ -99,17 +99,22 @@ const toggleCell = ({clientX, clientY}) => {
 }
 canvas.addEventListener('mousedown', toggleCell);
 // Keys Handler
+const changeOnKeyDownBehaviour = () => 
+    window.onkeydown = (e) => {
+            switch (e.keyCode) {
+                case 32:
+                    e.preventDefault();
+                    togglePause();
+                    break;
+                case 16:
+                    step();
+                    break;
+            }
+        }
 window.onkeydown = (e) => {
-    switch (e.keyCode) {
-        case 32:
-            e.preventDefault();
-            //togglePause();
-            new Audio('amogus.ogg').play();
-            render(grid);
-            setTimeout(() => togglePause(), 1300);
-            break;
-        case 16:
-            step();
-            break;
-    }
+    e.preventDefault();
+    changeOnKeyDownBehaviour();
+    new Audio('amogus.ogg').play();
+    render(grid);
+    setTimeout(() => togglePause(), 1300);
 }
