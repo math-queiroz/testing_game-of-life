@@ -1,0 +1,52 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Sen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
+/* Variáveis */
+:root {
+    --base-light: #e5e5e5;
+    --primary-color: #A03C00;
+    --base-dark: #001029;
+}
+
+/* Corpo */
+body { background-color: var(--base-dark); margin: 0px; }
+
+/* Esquemas de Cor e Estilos */
+.primary { color: var(--primary-color); }
+.light { color: var(--base-light); }
+.p-text-shadow { text-shadow: -3px 3px 0 var(--primary-color); }
+.l-text-shadow { text-shadow: -3px 3px 0 var(--base-light); }
+
+/* Barra de Navegacao */
+.nav {
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    position: absolute;
+}
+
+/* Classes de Apresentacao */
+.intro {
+    width: 650px;
+    height: 300px;
+    margin: 20vh 12vw;
+    position: absolute;
+}
+.intro > .nome {
+    padding-top: 120px;
+    color: var(--base-light);
+    font: 3em 'Secular One';
+    text-align: center;
+}
+
+/* Classes do Canvas */
+.canvas-container {
+    width: 95vw;
+    margin-top: 50vh;
+    position: absolute;
+}
+#game-canvas {
+    width: 100%;
+    height: 100%;
+}
